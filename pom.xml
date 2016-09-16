@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.codecentric</groupId>
+	<artifactId>cucumber-spring-boot-starter</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>cucumber-spring-boot-starter</name>
+	<description>Boot starter for cucumber</description>
+	<packaging>jar</packaging>
+	<url>https://github.com/Riggs333/cucumber-spring-boot-starter</url>
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://opensource.org/licenses/Apache-2.0</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>Thomas Traude</name>
+			<email>thomas.traude@codecentric.de</email>
+			<organization>codecentric AG</organization>
+		</developer>
+	</developers>
+	<scm>
+		<connection>scm:git:git://github.com/Riggs333/cucumber-spring-boot-starter.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/Riggs333/cucumber-spring-boot-starter.git</developerConnection>
+		<url>https://github.com/Riggs333/cucumber-spring-boot-starter</url>
+	</scm>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.boot.version>1.4.0.RELEASE</spring.boot.version>
+		<cucumber-jvm.version>1.2.5</cucumber-jvm.version>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>info.cukes</groupId>
+				<artifactId>cucumber-jvm</artifactId>
+				<version>${cucumber-jvm.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-junit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>info.cukes</groupId>
+			<artifactId>cucumber-spring</artifactId>
+		</dependency>
+	</dependencies>
+</project>
